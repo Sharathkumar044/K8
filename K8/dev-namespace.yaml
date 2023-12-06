@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+#In Kubernetes, a namespace is a way to organize and isolate resources within a cluster.
+#It provides a scope for names, meaning that the same resource names can exist in different namespaces without conflicting with each other.
+#Here are some real-time use cases for creating and using namespaces:
+#Resource Isolation:
+#Multi-Tenancy:
+#Environment Separation:
+#Deployment Strategies:
+#Organizing and Managing Applications:
