@@ -1,19 +1,20 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name:
+  name: nautilus
 spec:
+  schedule: "*/11 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
-            - name: nginx-container
+            - name: cron-nautilus
               image: nginx:latest
               imagePullPolicy: IfNotPresent
               command:
                 - "/bin/sh"
                 - c
-                - date;echo Hello from the Kubernetes cluster
+                - date;echo Welcome to xfusioncorp!
           restartPolicy: OnFailure
-  schedule: "* * * * *"
+
